@@ -37,7 +37,7 @@ cp -rL ../src .
 echo "Docker build"
 sudo docker build -t node_red_dg .
 echo "Docker save"
-sudo docker save example_service | gzip > ../example_export/node_red_dg.tgz
+sudo docker save node_red_dg | gzip > ../example_export/node_red_dg.tgz
 echo "Making Zip"
 cd ../example_export
 tar --mtime='1970-01-01' -czvf ../node_red_dg.spx *
