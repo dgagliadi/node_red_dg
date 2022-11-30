@@ -35,6 +35,7 @@ cp -rL ../src .
 # Build and save image before generating solution zip
 ######################################
 echo "Docker build"
+echo node_red_dg
 sudo docker build -t node_red_dg .
 echo "Docker save"
 sudo docker save node_red_dg | gzip > ../example_export/node_red_dg.tgz
